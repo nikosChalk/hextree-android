@@ -2,6 +2,12 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools">
 
+    <uses-permission android:name="android.permission.INTERNET" />
+
+    <queries>
+        <package android:name="io.hextree.attacksurface" />
+    </queries>
+
     <application
         android:allowBackup="true"
         android:dataExtractionRules="@xml/data_extraction_rules"
@@ -12,14 +18,62 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.HetreePoC"
         tools:targetApi="31">
+        <activity
+            android:name=".ContentProviderSolver"
+            android:exported="true">
+            <intent-filter>
+                <category android:name="android.intent.category.DEFAULT" />
+                <action android:name="io.hextree.FLAG33"/>
+                <data android:scheme="content"/>
+                <data android:path="/io.hextree.flag33_2/flags"/>
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".ServiceSolver"
+            android:exported="false" />
+        <activity
+            android:name=".BroadcastSolver"
+            android:exported="false" />
+        <activity
+            android:name=".Flag8ActivityHextree"
+            android:exported="false" />
+        <activity
+            android:name=".Flag9ActivityHextree"
+            android:exported="false" />
+        <activity
+            android:name=".IntentSolver"
+            android:exported="true">
+            <intent-filter>
+                <action android:name="io.hextree.attacksurface.ATTACK_ME" />
 
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+            <intent-filter>
+                <action android:name="io.hextree.attacksurface.MUTATE_ME" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+            <intent-filter>
+                <action android:name="android.intent.action.VIEW" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+                <category android:name="android.intent.category.BROWSABLE" />
+
+                <data
+                    android:host="token"
+                    android:scheme="hex" />
+            </intent-filter>
+        </activity>
         <activity
             android:name=".DataHandlingActivity"
             android:exported="true">
+
             <!-- Typical intent filter for handling "Share" of simple text -->
             <intent-filter>
                 <action android:name="android.intent.action.SEND" />
+
                 <category android:name="android.intent.category.DEFAULT" />
+
                 <data android:mimeType="text/plain" />
             </intent-filter>
         </activity>
@@ -32,6 +86,17 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+        
+        <provider
+            android:authorities="com.example.hextreepoc.flag37"
+            android:name=".Flag37ContentProvider"
+            android:exported="false"
+            android:grantUriPermissions="true">
+            <meta-data
+                android:name="android.support.FILE_PROVIDER_PATHS"
+                android:resource="@xml/flag37filepaths"/>
+            />
+        </provider>
     </application>
 
 </manifest>

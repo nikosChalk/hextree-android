@@ -7,6 +7,10 @@ android {
     namespace = "com.example.hetreepoc"
     compileSdk = 34
 
+    buildFeatures {
+        aidl = true
+    }
+
     defaultConfig {
         applicationId = "com.example.hetreepoc"
         minSdk = 28

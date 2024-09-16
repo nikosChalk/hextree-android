@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".IntentSolver">
+
+    <TableLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="129dp" >
+
+            <Button
+                android:id="@+id/flag1Button"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Flag1" />
+
+            <Button
+                android:id="@+id/flag2Button"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Flag2" />
+
+            <Button
+                android:id="@+id/flag3Button"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Flag3" />
+
+            <Button
+                android:id="@+id/flag5Button"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Flag5" />
+
+        </TableRow>
+
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="match_parent" >
+
+            <Button
+                android:id="@+id/flag6Button"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Flag6" />
+
+            <Button
+                android:id="@+id/flag7Button"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Flag7" />
+
+            <Button
+                android:id="@+id/flag8Button"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Flag8" />
+
+            <Button
+                android:id="@+id/flag9Button"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Flag9" />
+        </TableRow>
+
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="match_parent" >
+
+            <Button
+                android:id="@+id/flag12Button"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Flag12" />
+
+            <Button
+                android:id="@+id/flag22Button"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Flag22" />
+        </TableRow>
+
+    </TableLayout>
+</FrameLayout>

@@ -3,6 +3,7 @@ package com.example.hetreepoc
 import android.annotation.SuppressLint
 import android.content.Intent
 import android.os.Bundle
+import android.util.Log
 import android.widget.TextView
 import androidx.activity.enableEdgeToEdge
 import androidx.appcompat.app.AppCompatActivity
@@ -26,5 +27,7 @@ class DataHandlingActivity : AppCompatActivity() {
         if(intentData != null) {
             textView.text = "Intent data: $intentData"
         }
+
+        Log.i(DataHandlingActivity::class.java.name,  "callingActivity: " + callingActivity?.className)
     }
 }
